@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootCrudHibernateExampleApplication {
+public class SpringBootCRUDHibernateExampleApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootCrudHibernateExampleApplication.class, args);
+		SpringApplication.run(SpringBootCRUDHibernateExampleApplication.class, args);
 	}
 
 }
