@@ -16,12 +16,8 @@ import java.util.List;
 @Controller
 public class AppController {
 
-    private ProductService service;
-
     @Autowired
-    public AppController(ProductService service) {
-        this.service = service;
-    }
+    private ProductService service;
 
     @GetMapping("/")
     public String viewHomePage(Model model){
