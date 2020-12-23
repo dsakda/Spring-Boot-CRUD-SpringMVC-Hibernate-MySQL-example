@@ -9,9 +9,17 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "brand")
     private String brand;
-    private String madein;
+
+    @Column(name = "made_in")
+    private String madeIn;
+
+    @Column(name = "price")
     private float price;
 
     public Product() {
@@ -41,12 +49,12 @@ public class Product {
         this.brand = brand;
     }
 
-    public String getMadein() {
-        return madein;
+    public String getMadeIn() {
+        return madeIn;
     }
 
-    public void setMadein(String madein) {
-        this.madein = madein;
+    public void setMadeIn(String madeIn) {
+        this.madeIn = madeIn;
     }
 
     public float getPrice() {
