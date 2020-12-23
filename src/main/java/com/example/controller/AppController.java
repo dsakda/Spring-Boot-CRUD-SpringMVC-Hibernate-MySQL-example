@@ -21,8 +21,7 @@ public class AppController {
 
     @GetMapping("/")
     public String viewHomePage(Model model){
-        List<Product> listProducts = service.listAll();
-        model.addAttribute("listProducts", listProducts);
+        model.addAttribute("listProducts", service.listAll());
         return "index";
     }
 
@@ -41,8 +40,7 @@ public class AppController {
     @GetMapping("/edit/{id}")
     public ModelAndView showEditProductPage(@PathVariable(name = "id") long id) {
         ModelAndView mav = new ModelAndView("edit_product");
-        Product product = service.get(id);
-        mav.addObject("product",product);
+        mav.addObject("product",service.get(id));
         return mav;
     }
 
