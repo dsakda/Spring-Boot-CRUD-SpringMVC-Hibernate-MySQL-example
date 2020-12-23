@@ -12,12 +12,8 @@ import java.util.List;
 @Transactional
 public class ProductService {
 
-    private ProductRepository repo;
-
     @Autowired
-    public ProductService(ProductRepository repo) {
-        this.repo = repo;
-    }
+    private ProductRepository repo;
 
     public List<Product> listAll() {
         return repo.findAll();
